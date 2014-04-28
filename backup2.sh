@@ -59,7 +59,7 @@ if at_home == false; then
     dd if=$disk of=/mbr.bak bs=512 count=1
     echo "MBR Backed up."
     echo "Executing full system backup..."
-    rdiff-backup $args$args_home$args_full $sourcedir_full $user@$server::$backupdir_full
+    rdiff-backup $args$args_full $sourcedir_full $user@$server::$backupdir_full
     echo "Full system backup successful."
 else; exit
 fi

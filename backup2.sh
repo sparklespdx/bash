@@ -54,7 +54,7 @@ rdiff-backup $args$args_home $sourcedir_home $user@$server::$backupdir_home
 echo "/home backup successful."
 
 # run 2 if we have the bandwidth
-if at_home == false; then
+if at_home == true; then
     echo "Backing up MBR..."
     dd if=$disk of=/mbr.bak bs=512 count=1
     echo "MBR Backed up."
